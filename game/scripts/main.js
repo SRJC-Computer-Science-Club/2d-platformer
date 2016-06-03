@@ -3,7 +3,6 @@ requirejs(["map"], function(util){
 
 
 var game = new Phaser.Game(1024, 768, Phaser.AUTO, '', { preload: preload, create: create, update: update });
-joshua;
 
 function preload ()
 {
@@ -16,7 +15,7 @@ function preload ()
 function create ()
 {
     game.stage.backgroundColor = "#BFEBFF"
-    joshua = new Map(game, {x: game.world.width/4, y: game.world.height/4}, 'joshua');
+    var joshua = new Map(game, {x: game.world.width/4, y: game.world.height/4}, 'joshua');
     var steven = new Map(game, {x: 3*game.world.width/4, y: game.world.height/4}, 'steven');
     var oran = new Map(game, {x: game.world.width/4, y: 3*game.world.height/4}, 'oran');
     var seaney = new Map(game, {x: 3*game.world.width/4, y: 3*game.world.height/4}, 'seaney');
