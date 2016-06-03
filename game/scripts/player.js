@@ -1,13 +1,13 @@
-player = function(game, pos, img)
+Player = function(game, pos, img)
 {
     Phaser.Sprite.call(this, game, pos.x, pos.y, img);
     this.anchor.setTo(0.5, 0.5);
 };
 
-player.prototype = Object.create(Phaser.Sprite.prototype);
-player.prototype.constructor = player;
+Player.prototype = Object.create(Phaser.Sprite.prototype);
+Player.prototype.constructor = Player;
 
-player.prototype.update = function()
+Player.prototype.update = function()
 {
     if(this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR))
     {
