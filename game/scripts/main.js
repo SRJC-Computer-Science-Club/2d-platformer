@@ -12,6 +12,7 @@ function preload ()
     game.load.image('oran', 'assets/oran01.png');
     game.load.image('seaney', 'assets/seaney01.png');
     game.load.image('player', 'assets/alienGreen_swim1.png');
+    game.load.image('block', 'assets/brickBrown.png');
 }
 
 function create ()
@@ -21,12 +22,14 @@ function create ()
     var steven = new Map(game, {x: 3*game.world.width/4, y: game.world.height/4}, 'steven');
     var oran = new Map(game, {x: game.world.width/4, y: 3*game.world.height/4}, 'oran');
     var seaney = new Map(game, {x: 3*game.world.width/4, y: 3*game.world.height/4}, 'seaney');
-    var player = new player(game, {x:0, y:0}, 'player');
+    var player = new Player(game, {x:game.world.width/2, y:game.world.width/2}, 'player');
+    var block = new Map(game, {x: game.world.centerX, y: game.world.centerY}, 'block');
     game.add.existing(joshua);
     game.add.existing(steven);
     game.add.existing(oran);
     game.add.existing(seaney);
     game.add.existing(player);
+    game.add.existing(block);
 }
 
 function update()
